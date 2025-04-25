@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- ADD TYPED.JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <div class="hero-header">
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <i class="fa-solid fa-a"></i>
+          <div class="logo-text">Mark Anthony Carbungco</div>
+        </div>
+
+        <!-- Hamburger Toggle -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav>
+          <ul class="navlinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        <div class="hero-pic">
+          <img src="dark-cyberpunk-1920-x-960-wallpaper-m9qwibytxnpaf9su.jpg" alt="profile pic" />
+        </div>
+        <div class="hero-text">
+          <h5>Hi I'm a <span class="input">FrontEnd Developer</span></h5>
+          <h1>Mark Anthony Carbungco</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod, nisl eget consectetur sagittis, nisl nunc.</p>
+          <div class="btn-group">
+            <a href="#" class="btn">Download CV</a>
+            <a href="#" class="btn">Contact Me</a>
+          </div>
+          <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Scripts -->
+  <script>
+    var togglebtn = document.querySelector('.hamburger');
+    var nav = document.querySelector('.navlinks');
+    var links = document.querySelectorAll('.navlinks li');
+
+    togglebtn.addEventListener("click", function(){
+      this.classList.toggle("click");
+      nav.classList.toggle("open");
+    });
+
+    var typed = new Typed(".input", {
+      strings: ["Frontend Developer", "UX Designer", "Web Developer"],
+      typeSpeed: 70,
+      backSpeed: 55,
+      loop: true
+    });
+  </script>  
+</body>
+</html>

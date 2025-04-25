@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+  }
+  
+  body {
+    background-color: #222;
+    color: white;
+  }
+  
+  .hero-header {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #222;
+  }
+  
+  .wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo i {
+    background-color: #007ced;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .navlinks {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navlinks li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 16px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .hero-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #444;
+    margin: 20px;
+  }
+  
+  .hero-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .hero-pic img:hover {
+    transform: scale(1.1);
+  }
+  
+  .hero-text {
+    max-width: 500px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .hero-text h5 {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    color: #007ced;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .btn-group {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #007ced;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .social a {
+    color: #007ced;
+    margin: 0 10px;
+    font-size: 1.5rem;
+  }
+  
+  /* Hamburger Styles */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 15;
+  }
+  
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #007ced;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition: 0.4s;
+  }
+  
+  /* Hide the checkbox */
+  #menu-toggle {
+    display: none;
+  }
+  
+  /* Hamburger animation to X */
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  .hero-text .social i {
+    color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+  }
+  
+  .hero-text .social i:hover {
+    color: #007ced;
+    transform: rotate(360deg);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 930px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .navlinks {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #222;
+      width: 200px;
+      display: none;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+  
+    #menu-toggle:checked + .hamburger + nav .navlinks {
+      display: flex;
+    }
+  
+    .navlinks li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    nav.navlinks.open {
+      right: 0;
+    }
+  }
+  
+  @media(max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding-top: 2rem;
+    }
+    .hero-text {
+      padding: 40px 0px;
+    }
+  }
+
+  .input {
+    border-right: 2px solid #007ced; /* Typewriter cursor */
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+    font-weight: bold;
+    color: #007ced; /* blue text */
+  }
+  
+  @keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: #007ced; }
+    100% { border-color: transparent; }
+  }
+  
+  
